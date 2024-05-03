@@ -83,8 +83,13 @@ BMO is a simple social media network built with HTML, CSS, Tailwind CSS and Lara
 ## Snapshots
 
 <img src="/public/snapshots/bmo1.png">
+<hr>
 <img src="/public/snapshots/bmo2.png">
+<hr>
 <img src="/public/snapshots/bmo3.png">
+<hr>
 <img src="/public/snapshots/bmo4.png">
+<hr>
 <img src="/public/snapshots/bmo5.png">
+<hr>
 <img src="/public/snapshots/bmo6.png">
