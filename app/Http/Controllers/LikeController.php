@@ -25,7 +25,7 @@ class LikeController extends Controller
         return back()->with('error', 'You already liked this post');
     }
 
-    public function destroy(Like $like)
+    public function destroy(Post $post, Like $like)
     {
         $like->delete();
         return back()->with('error', 'dislike');

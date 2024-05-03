@@ -80,3 +80,11 @@ BMO is a simple social media network built with HTML, CSS, Tailwind CSS and Lara
 2. Explore the app's features such as creating posts, interacting with posts, managing your profile, and following other users.
 3. Enjoy a personalized feed based on the accounts you follow.
 
+## Snapshots
+
+<img src="/public/snapshots/bmo1.png">
+<img src="/public/snapshots/bmo2.png">
+<img src="/public/snapshots/bmo3.png">
+<img src="/public/snapshots/bmo4.png">
+<img src="/public/snapshots/bmo5.png">
+<img src="/public/snapshots/bmo6.png">

@@ -1,30 +1,28 @@
 <x-app-layout>
     <x-slot name="header">
-            {{ $profileData['user']->name }}{{__(' Profile') }}
+        {{ $profileData['user']->name }}{{ __(' Profile') }}
     </x-slot>
 
-<div class="flex items-center">
-    <img class="inline-flex w-40 h-40" src="{{ $profileData['user']->avatar }}" alt="avatar">
+    <div class="flex items-center">
+        <img class="inline-flex w-40 h-40" src="{{ $profileData['user']->avatar }}" alt="avatar">
 
-    @auth
-        @if ($profileData['user']->id !== Auth::id())
-            @if ($profileData['isFollowing'])
-                <form action="{{ Route('unfollow', $profileData['user']->id) }}" method="POST" class="inline-flex ml-3 text-lg font-semibold">
-                    @csrf
-                    <button type="submit" class="text-red-600 rounded ring-1 ring-white p-2">Unfollow</button>
-                </form>
-            @else
-                <form action="{{ Route('follow', $profileData['user']->id) }}" method="POST" class="inline-flex ml-3 text-lg font-semibold">
-                    @csrf
-                    <button type="submit" class="rounded ring-1 ring-white p-2">Follow</button>
-                </form>
+        @auth
+            @if ($profileData['user']->id !== Auth::id())
+                @if ($profileData['isFollowing'])
+                    <form action="{{ Route('unfollow', $profileData['user']->id) }}" method="POST"
+                        class="inline-flex ml-3 text-lg font-semibold">
+                        @csrf
+                        <button type="submit" class="text-red-600 rounded ring-1 ring-white p-2">Unfollow</button>
+                    </form>
+                @else
+                    <form action="{{ Route('follow', $profileData['user']->id) }}" method="POST"
+                        class="inline-flex ml-3 text-lg font-semibold">
+                        @csrf
+                        <button type="submit" class="rounded ring-1 ring-white p-2">Follow</button>
+                    </form>
+                @endif
             @endif
-            
-            <span class="open-icon inline-flex ml-3 pb-1 cursor-pointer"> 
-                <x-chat-icon />
-            </span>
-        @endif      
-    @endauth
+        @endauth
     </div>
 
 
@@ -41,5 +39,5 @@
     </div>
 
     {{ $slot }}
-       
+
 </x-app-layout>
